@@ -61,11 +61,6 @@ extension BotsTableViewController {
     
     // MARK: Data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Magic numbers! Fuck me, right?
-        return 1
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bots.count
     }
