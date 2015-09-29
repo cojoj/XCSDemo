@@ -1,7 +1,7 @@
 # 🖥 XCSDemo 
 
 This is a sample application which main purpose is show how you can easily use [**XcodeServerSDK**](https://github.com/czechboy0/XcodeServerSDK) and create _almost_ everything based on **Xcode Server**! 👍
-I'm a huge Swift fan, so this one is written in Swift 2, so be sure yu use at least Xcode 7.0 to run this code.
+I'm a huge Swift fan, so this one is written in Swift 2, so be sure you use at least Xcode 7.0 to run this code.
 
 # 🛠 Install
 
