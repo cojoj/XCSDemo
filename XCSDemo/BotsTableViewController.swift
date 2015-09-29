@@ -40,9 +40,31 @@ class BotsTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    
+    // MARK: Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier,
+                  index = tableView.indexPathForCell((sender as? UITableViewCell)!)?.row else { return }
+        
+        switch identifier {
+        case "ShowBotDetails":
+            guard let destination = segue.destinationViewController as? DetailsViewController else { return }
+            destination.navigationItem.title = bots[index].name
+        default:
+            break
+        }
+    }
 }
 
 extension BotsTableViewController {
+    
+    // MARK: Data source
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // Magic numbers! Fuck me, right?
+        return 1
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bots.count
@@ -53,9 +75,14 @@ extension BotsTableViewController {
         
         let bot = bots[indexPath.row]
         cell.textLabel?.text = bot.name
-        cell.detailTextLabel?.text = String(bot.integrationsCount)
         
         return cell
+    }
+    
+    // MARK: Delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }
