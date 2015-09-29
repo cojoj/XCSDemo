@@ -50,7 +50,7 @@ class BotsTableViewController: UITableViewController {
         switch identifier {
         case "ShowBotDetails":
             guard let destination = segue.destinationViewController as? DetailsViewController else { return }
-            destination.navigationItem.title = bots[index].name
+            destination.configure(bots[index], server: server)
         default:
             break
         }
