@@ -1,0 +1,6 @@
+framework module BuildaUtils {
+  umbrella header "BuildaUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

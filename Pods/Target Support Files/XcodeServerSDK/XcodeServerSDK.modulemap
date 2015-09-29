@@ -1,0 +1,6 @@
+framework module XcodeServerSDK {
+  umbrella header "XcodeServerSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
