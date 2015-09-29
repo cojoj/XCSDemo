@@ -52,7 +52,7 @@ class DetailsViewController: UIViewController {
             guard let integration = integration where error == nil else { return }
             dispatch_async(dispatch_get_main_queue()) {
                 self.integrateButton.userInteractionEnabled = true
-                let alert = UIAlertController(title: "In progress", message: "Integration for \(self.bot.name) was started with id: \(integration.id)", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "In progress", message: "Integration for \(self.bot.name) \nhas been started with id: \n\(integration.id)", preferredStyle: .Alert)
                 let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                 alert.addAction(okAction)
                 self.presentViewController(alert, animated: true, completion: nil)

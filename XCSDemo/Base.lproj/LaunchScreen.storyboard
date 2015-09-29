@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Buildasaur" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-wL-nDt">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rb8-wL-nDt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="IIm-sl-Tee"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Rb8-wL-nDt" secondAttribute="bottom" id="MEH-Qb-zbj"/>
+                            <constraint firstAttribute="trailing" secondItem="Rb8-wL-nDt" secondAttribute="trailing" id="PmP-5f-rNF"/>
+                            <constraint firstItem="Rb8-wL-nDt" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="p8a-iO-k6l"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Buildasaur" width="512" height="512"/>
+    </resources>
 </document>
